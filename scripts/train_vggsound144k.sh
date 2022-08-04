@@ -1,0 +1,14 @@
+python train.py --multiprocessing_distributed \
+    --train_data_path /path/to/VGGSound-all/ \
+    --test_data_path /path/to/Flickr-SoundNet/ \
+    --test_gt_path /path/to/Flickr-SoundNet/Annotations/ \
+    --experiment_name vggss144k_movsl \
+    --model 'movsl' \
+    --trainset 'vggss_144k' \
+    --testset 'flickr' \
+    --epochs 20 \
+    --batch_size 128 \
+    --init_lr 0.0001 \
+    --use_momentum --use_mom_eval \
+    --m_img 0.999 --m_aud 0.999 \
+    --dropout_img 0.9 --dropout_aud 0
