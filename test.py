@@ -6,20 +6,18 @@ from torch.utils.data import DataLoader
 import utils
 import numpy as np
 import argparse
-from model import MoVSL
+from model import SLAVC
 from datasets import get_test_dataset, inverse_normalize
 import cv2
 
 import torch.multiprocessing as mp
 import torch.distributed as dist
 
-from object_model import DINO
-
 
 def get_arguments():
     parser = argparse.ArgumentParser()
     parser.add_argument('--model_dir', type=str, default='./checkpoints', help='path to save trained model weights')
-    parser.add_argument('--experiment_name', type=str, default='movsl_vggss', help='experiment name (experiment folder set to "args.model_dir/args.experiment_name)"')
+    parser.add_argument('--experiment_name', type=str, default='slavc_vggss', help='experiment name (experiment folder set to "args.model_dir/args.experiment_name)"')
     parser.add_argument('--save_visualizations', action='store_true', help='Set to store all VSL visualizations (saved in viz directory within experiment folder)')
 
     # Dataset
@@ -29,7 +27,7 @@ def get_arguments():
     parser.add_argument('--batch_size', default=1, type=int, help='Batch Size')
 
     # mo-vsl hyper-params
-    parser.add_argument('--model', default='movsl')
+    parser.add_argument('--model', default='slavc')
     parser.add_argument('--out_dim', default=512, type=int)
     parser.add_argument('--num_negs', default=None, type=int)
     parser.add_argument('--tau', default=0.03, type=float, help='tau')
@@ -98,8 +96,8 @@ def main_worker(local_rank, ngpus_per_node, args):
         torch.distributed.barrier()
 
     # Create model
-    if args.model.lower() == 'movsl':
-        audio_visual_model = MoVSL(args.tau, args.out_dim, args.dropout_img, args.dropout_aud, args.m_img, args.m_aud, args.use_mom_eval, num_neg=args.num_negs)
+    if args.model.lower() == 'slavc':
+        audio_visual_model = SLAVC(args.tau, args.out_dim, args.dropout_img, args.dropout_aud, args.m_img, args.m_aud, args.use_mom_eval, num_neg=args.num_negs)
     else:
         raise ValueError
 

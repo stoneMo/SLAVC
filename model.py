@@ -5,9 +5,9 @@ from torchvision.models import resnet18
 import torch.distributed as dist
 
 
-class MoVSL(nn.Module):
+class SLAVC(nn.Module):
     def __init__(self, tau, dim, dropout_img, dropout_aud, momentum_img, momentum_aud, use_mom_eval, num_neg=None):
-        super(MoVSL, self).__init__()
+        super(SLAVC, self).__init__()
         self.tau = tau
         self.num_neg = num_neg
 

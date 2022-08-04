@@ -15,14 +15,14 @@ import torch.distributed as dist
 from tensorboardX import SummaryWriter
 
 import utils
-from model import MoVSL
+from model import SLAVC
 from datasets import get_train_dataset, get_test_dataset
 
 
 def get_arguments():
     parser = argparse.ArgumentParser()
     parser.add_argument('--model_dir', type=str, default='./checkpoints', help='path to save trained model weights')
-    parser.add_argument('--experiment_name', type=str, default='movsl_vggss', help='experiment name (used for checkpointing and logging)')
+    parser.add_argument('--experiment_name', type=str, default='slavc_vggss', help='experiment name (used for checkpointing and logging)')
 
     # Data params
     parser.add_argument('--trainset', default='vggss', type=str, help='trainset (flickr or vggss)')
@@ -37,10 +37,7 @@ def get_arguments():
     parser.add_argument('--use_supervised_data', action='store_true')
 
     # mo-vsl hyper-params
-    parser.add_argument('--model', default='movsl')
-    parser.add_argument('--imgnet_type', default='vitb8')
-    parser.add_argument('--audnet_type', default='vitb8')
-
+    parser.add_argument('--model', default='slavc')
     parser.add_argument('--out_dim', default=512, type=int)
     parser.add_argument('--num_negs', default=None, type=int)
     parser.add_argument('--tau', default=0.03, type=float, help='tau')
@@ -132,8 +129,8 @@ def main_worker(gpu, ngpus_per_node, args):
     builtins.print = print_and_log
 
     # Create model
-    if args.model.lower() == 'movsl':
-        model = MoVSL(args.tau, args.out_dim, args.dropout_img, args.dropout_aud, args.m_img, args.m_aud, args.use_mom_eval, num_neg=args.num_negs)
+    if args.model.lower() == 'slavc':
+        model = SLAVC(args.tau, args.out_dim, args.dropout_img, args.dropout_aud, args.m_img, args.m_aud, args.use_mom_eval, num_neg=args.num_negs)
     else:
         raise ValueError
 

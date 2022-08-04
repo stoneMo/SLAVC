@@ -55,8 +55,8 @@ python train.py --multiprocessing_distributed \
     --train_data_path /path/to/VGGSound-all/ \
     --test_data_path /path/to/Flickr-SoundNet/ \
     --test_gt_path /path/to/Flickr-SoundNet/Annotations/ \
-    --experiment_name vggss144k_movsl \
-    --model 'movsl' \
+    --experiment_name vggss144k_slavc \
+    --model 'slavc' \
     --trainset 'vggss_144k' \
     --testset 'flickr' \
     --epochs 20 \
@@ -74,7 +74,7 @@ For testing and visualization, simply run
 ```
 python test.py --test_data_path /path/to/Extended-VGGSound-test/ \
     --model_dir checkpoints \
-    --experiment_name vggss144k_movsl \
+    --experiment_name vggss144k_slavc \
     --testset 'vggss_plus_silent' \
     --alpha 0.9
 ```

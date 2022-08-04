@@ -2,8 +2,8 @@ python train.py --multiprocessing_distributed \
     --train_data_path /path/to/VGGSound-all/ \
     --test_data_path /path/to/Flickr-SoundNet/ \
     --test_gt_path /path/to/Flickr-SoundNet/Annotations/ \
-    --experiment_name vggss144k_movsl \
-    --model 'movsl' \
+    --experiment_name vggss144k_slavc \
+    --model 'slavc' \
     --trainset 'vggss_144k' \
     --testset 'flickr' \
     --epochs 20 \
