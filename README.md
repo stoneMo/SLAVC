@@ -48,7 +48,7 @@ We release MoVSL model pre-trained on VGG-Sound 144k data and scripts on reprodu
 
 ## Train
 
-For training an MoVSL model, please run
+For training an SLAVC model, please run
 
 ```
 python train.py --multiprocessing_distributed \
