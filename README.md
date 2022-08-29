@@ -5,7 +5,7 @@ Official codebase for SLAVC.
 SLAVC is a new approach for weakly-supervised visual sound source localization to identify negatives and solve significant overfitting problems.
 
 <div align="center">
-  <img width="100%" alt="MoVSL Illustration" src="images/framework.png">
+  <img width="100%" alt="SLAVC Illustration" src="images/framework.png">
 </div>
 
 
