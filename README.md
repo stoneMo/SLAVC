@@ -1,4 +1,4 @@
-# Tackling Overfitting and Silence in Weakly-Supervised Audio-Visual Source Localization
+# A Closer Look at Weakly-Supervised Audio-Visual Source Localization
 
 Official codebase for SLAVC. 
 
@@ -43,8 +43,8 @@ We release MoVSL model pre-trained on VGG-Sound 144k data and scripts on reprodu
 
 | Method |    Train Set   |     Test Set    |     AP     |  max-F1  |  Precision  | url | Train | Test |
 |:------:|:--------------:|:---------------:|:------------:|:-----:|:-----:|:---:|:----:|:----:| 
-| MoVSL | VGG-Sound 144k | Extended Flickr-SoundNet |     51.63    | 59.10 | 83.60 | [model](https://drive.google.com/file/d/1wHufeLWZBv97IaE0cv0GrFk4pLX5NMUj/view?usp=sharing) | [script](./scripts/train_vggsound144k.sh) | [script](./scripts/test_extended_flickr_with_vggsound144k.sh) |
-| MoVSL | VGG-Sound 144k | Extended VGG-SS |     32.95    | 40.00 | 37.79| [model](https://drive.google.com/file/d/1wHufeLWZBv97IaE0cv0GrFk4pLX5NMUj/view?usp=sharing) | [script](./scripts/train_vggsound144k.sh) | [script](./scripts/test_extended_vggss_with_vggsound144k.sh) |
+| SLAVC | VGG-Sound 144k | Extended Flickr-SoundNet |     51.63    | 59.10 | 83.60 | [model](https://drive.google.com/file/d/1wHufeLWZBv97IaE0cv0GrFk4pLX5NMUj/view?usp=sharing) | [script](./scripts/train_vggsound144k.sh) | [script](./scripts/test_extended_flickr_with_vggsound144k.sh) |
+| SLAVC | VGG-Sound 144k | Extended VGG-SS |     32.95    | 40.00 | 37.79| [model](https://drive.google.com/file/d/1wHufeLWZBv97IaE0cv0GrFk4pLX5NMUj/view?usp=sharing) | [script](./scripts/train_vggsound144k.sh) | [script](./scripts/test_extended_vggss_with_vggsound144k.sh) |
 
 ## Train
 
