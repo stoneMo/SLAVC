@@ -4,7 +4,7 @@ Official codebase for SLAVC.
 
 SLAVC is a new approach for weakly-supervised visual sound source localization to identify negatives and solve significant overfitting problems.
 
-**A Closer Look at Weakly-Supervised Audio-Visual Source Localization**
+[**A Closer Look at Weakly-Supervised Audio-Visual Source Localization**](https://arxiv.org/abs/2209.09634)
 <br>Shentong Mo, Pedro Morgado<br>
 NeurIPS 2022.
 
