@@ -90,7 +90,7 @@ If you find this repository useful, please cite our paper:
 @article{mo2022SLAVC,
   title={A Closer Look at Weakly-Supervised Audio-Visual Source Localization},
   author={Mo, Shentong and Morgado, Pedro},
-  journal={Advances in Neural Information Processing Systems},
+  booktitle={Advances in Neural Information Processing Systems},
   year={2022}
 }
 ```
