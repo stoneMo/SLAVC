@@ -87,7 +87,7 @@ python test.py --test_data_path /path/to/Extended-VGGSound-test/ \
 
 If you find this repository useful, please cite our paper:
 ```
-@article{mo2022SLAVC,
+@inproceedings{mo2022SLAVC,
   title={A Closer Look at Weakly-Supervised Audio-Visual Source Localization},
   author={Mo, Shentong and Morgado, Pedro},
   booktitle={Advances in Neural Information Processing Systems},
