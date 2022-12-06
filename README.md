@@ -80,7 +80,8 @@ python test.py --test_data_path /path/to/Extended-VGGSound-test/ \
     --model_dir checkpoints \
     --experiment_name vggss144k_slavc \
     --testset 'vggss_plus_silent' \
-    --alpha 0.9
+    --alpha 0.9 \
+    --relative_prediction
 ```
 
 ## Citation

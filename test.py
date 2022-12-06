@@ -150,7 +150,7 @@ def validate(testdataloader, audio_visual_model, object_saliency_model, model_di
 
     evaluator_av = utils.EvaluatorFull(default_conf_thr=0.5, pred_size=args.pred_size, pred_thr=args.pred_thr, results_dir=f"{model_dir}/av")
     evaluator_obj = utils.EvaluatorFull(default_conf_thr=0.5, pred_size=args.pred_size,  pred_thr=args.pred_thr, results_dir=f"{model_dir}/obj")
-    evaluator_av_obj = utils.EvaluatorFull(default_conf_thr=0., pred_size=args.pred_size,  pred_thr=args.pred_thr, results_dir=f"{model_dir}/av_obj")
+    evaluator_av_obj = utils.EvaluatorFull(default_conf_thr=0.5, pred_size=args.pred_size,  pred_thr=args.pred_thr, results_dir=f"{model_dir}/av_obj")
     for step, (image, spec, bboxes, name) in enumerate(testdataloader):
         if args.gpu is not None:
             spec = spec.cuda(args.gpu, non_blocking=True)
